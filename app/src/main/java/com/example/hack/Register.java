@@ -26,6 +26,7 @@ public class Register extends AppCompatActivity {
     EditText name ,email , password;
     Button register;
     FirebaseAuth fAuth;
+    String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,12 +64,12 @@ public class Register extends AppCompatActivity {
                     return;
                 }
 
-                if(TextUtils.isEmpty(email1)){
+                if(TextUtils.isEmpty(email1) || !email1.matches(emailPattern)){
                     email.setError("Email is Required");
                     return;
                 }
 
-                if(TextUtils.isEmpty(password1)){
+                if(TextUtils.isEmpty(password1) || password1.length()<6){
                     password.setError("Password is Required");
                     return;
                 }
@@ -78,7 +79,9 @@ public class Register extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             Toast.makeText(Register.this, "User Created", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(), login.class));
+                            Intent it = new Intent(getApplicationContext(), login.class);
+                            startActivity(it);
+                            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
                         } else {
                             Toast.makeText(Register.this, "Error! " + task.getException().getMessage(), Toast.LENGTH_LONG).show();
                         }
@@ -106,11 +109,13 @@ public class Register extends AppCompatActivity {
     public void openActivity_main(View v){
         Intent it1 = new Intent(Register.this, onboarding.class);
         startActivity(it1);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 
     public void openActivity_login(View v){
         Intent it2 = new Intent(Register.this, login.class);
         startActivity(it2);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 
 }

@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
             public void run(){
                 Intent it = new Intent(MainActivity.this, onboarding.class);
                 startActivity(it);
+                overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
                 finish();
             }
         }, 2000); //2000 is time delayed in millseconds

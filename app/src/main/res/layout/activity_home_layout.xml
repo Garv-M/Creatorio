@@ -22,22 +22,24 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:padding="4dp"
-            app:srcCompat="@drawable/home" />
+            android:padding="2dp"
+            app:srcCompat="@drawable/home1" />
 
         <ImageView
             android:id="@+id/imageView8"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            app:srcCompat="@drawable/ic_baseline_equalizer_24" />
+            android:onClick="openActivity_info"
+            android:padding="2dp"
+            app:srcCompat="@drawable/info1" />
 
         <ImageView
             android:id="@+id/imageView6"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:padding="4dp"
+            android:padding="2dp"
             app:srcCompat="@drawable/person" />
 
     </LinearLayout>
@@ -70,7 +72,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="409dp"
-        android:layout_height="580dp"
+        android:layout_height="0dp"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"

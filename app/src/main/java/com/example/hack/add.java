@@ -149,6 +149,9 @@ public class add extends AppCompatActivity {
                             }
                             progressDialog.dismiss();
                             Toast.makeText(getApplicationContext(), "Image Uploaded Successfully ", Toast.LENGTH_LONG).show();
+                            Intent intent = new Intent(getApplicationContext(), home_layout.class);
+                            startActivity(intent);
+                            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
                              if(TextUtils.isEmpty(address1)){
                                 address.setError("Address Required");
                                 return;
@@ -183,5 +186,12 @@ public class add extends AppCompatActivity {
         }
         win.setAttributes(winParams);
     }
+
+    public void goto_home(View v){
+        Intent intent = new Intent(getApplicationContext(), home_layout.class);
+        startActivity(intent);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+    }
+
 
 }

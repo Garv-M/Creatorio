@@ -8,58 +8,73 @@
 
     <EditText
         android:id="@+id/txt_data"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="306dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/btn_bg"
         android:ems="10"
+        android:hint="Name"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:paddingLeft="20dp"
+        android:textColor="#F2F0F0"
         app:layout_constraintBottom_toTopOf="@+id/price_add"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/price_add"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="306dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/btn_bg"
         android:ems="10"
+        android:hint="Price"
         android:inputType="number"
+        android:paddingLeft="20dp"
+        android:textColor="#F2F0F0"
         app:layout_constraintBottom_toTopOf="@+id/Address_add"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_data" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/Address_add"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="306dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/btn_bg"
         android:ems="10"
+        android:hint="Address"
         android:inputType="textPostalAddress"
+        android:paddingLeft="20dp"
+        android:textColor="#F2F0F0"
         app:layout_constraintBottom_toTopOf="@+id/Phone_add"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/price_add" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/Phone_add"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="306dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/btn_bg"
         android:ems="10"
+        android:hint="Phone Number"
         android:inputType="phone"
-        app:layout_constraintBottom_toTopOf="@+id/image_view"
+        android:paddingLeft="20dp"
+        android:textColor="#F2F0F0"
+        app:layout_constraintBottom_toTopOf="@+id/btnbrowse"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Address_add" />
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/image_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="44dp"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginBottom="30dp"
         app:layout_constraintBottom_toTopOf="@+id/btnupload"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.784"
@@ -68,10 +83,18 @@
 
     <Button
         android:id="@+id/btnupload"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:text="upload"
+        android:layout_width="306dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="44dp"
+        android:background="@drawable/btn_bg"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="0dp"
+        android:text="Upload"
+        android:textColor="#000000"
+        android:textColorHint="#F2F0F0"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -79,13 +102,45 @@
 
     <Button
         android:id="@+id/btnbrowse"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="70dp"
+        android:background="@drawable/btn_bg"
         android:text="browse"
-        app:layout_constraintBottom_toBottomOf="@+id/image_view"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnupload"
         app:layout_constraintEnd_toStartOf="@+id/image_view"
         app:layout_constraintHorizontal_bias="0.553"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="80dp"
+        android:text="Add"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="24dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        android:onClick="goto_home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

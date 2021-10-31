@@ -1,6 +1,6 @@
 package com.example.hack;
 
-public class product_detail {
+public class product_detail extends uploadinfo {
 
     public String name;
     public String address;

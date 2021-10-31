@@ -70,7 +70,8 @@ public class login extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()){
                             Toast.makeText(login.this, "Successfully loged in :)", Toast.LENGTH_SHORT).show();
-                            startActivity(new Intent(getApplicationContext(),home_layout.class));
+                            startActivity(new Intent(getApplicationContext(), home_layout.class));
+                            overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
                         }else{
                             Toast.makeText(login.this, "Error! "+ task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                         }
@@ -95,11 +96,13 @@ public class login extends AppCompatActivity {
     public void openActivity_main(View v){
         Intent it = new Intent(login.this, onboarding.class);
         startActivity(it);
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
     }
 
     public void openActivity_sign(View v){
         Intent it = new Intent(login.this, Register.class);
         startActivity(it);
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right);
     }
 
 }
